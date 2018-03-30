@@ -33,7 +33,5 @@ public class HotelBookingTest extends BaseTest{
         
 //        new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
-
-        driver.quit();
     }
 }

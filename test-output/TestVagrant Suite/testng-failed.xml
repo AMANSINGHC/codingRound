@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TestVagrant Suite]" parallel="tests">
-  <test name="Hotel Booking Test(failed)" parallel="tests">
+  <test name="SignIn Test(failed)" parallel="tests">
     <classes>
-      <class name="testcases.HotelBookingTest">
+      <class name="testcases.SignInTest">
         <methods>
-          <include name="shouldBeAbleToSearchForHotels"/>
+          <include name="openBrowser"/>
+          <include name="shouldThrowAnErrorIfSignInDetailsAreMissing"/>
         </methods>
-      </class> <!-- testcases.HotelBookingTest -->
+      </class> <!-- testcases.SignInTest -->
     </classes>
-  </test> <!-- Hotel Booking Test(failed) -->
+  </test> <!-- SignIn Test(failed) -->
 </suite> <!-- Failed suite [TestVagrant Suite] -->

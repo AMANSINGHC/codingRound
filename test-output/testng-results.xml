@@ -2,43 +2,55 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="TestVagrant Suite" duration-ms="63336" started-at="2018-03-30T08:06:32Z" finished-at="2018-03-30T08:07:35Z">
+  <suite name="TestVagrant Suite" duration-ms="70338" started-at="2018-03-30T08:35:11Z" finished-at="2018-03-30T08:36:21Z">
     <groups>
     </groups>
-    <test name="Hotel Booking Test" duration-ms="59843" started-at="2018-03-30T08:06:32Z" finished-at="2018-03-30T08:07:32Z">
+    <test name="Hotel Booking Test" duration-ms="61024" started-at="2018-03-30T08:35:11Z" finished-at="2018-03-30T08:36:12Z">
       <class name="testcases.HotelBookingTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.HotelBookingTest@3ffc5af1]" name="openBrowser" is-config="true" duration-ms="37824" started-at="2018-03-30T13:36:32Z" finished-at="2018-03-30T13:37:10Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.HotelBookingTest@5e5792a0]" name="openBrowser" is-config="true" duration-ms="28521" started-at="2018-03-30T14:05:11Z" finished-at="2018-03-30T14:05:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="shouldBeAbleToSearchForHotels()[pri:0, instance:testcases.HotelBookingTest@3ffc5af1]" name="shouldBeAbleToSearchForHotels" duration-ms="21921" started-at="2018-03-30T13:37:10Z" finished-at="2018-03-30T13:37:32Z">
+        <test-method status="PASS" signature="shouldBeAbleToSearchForHotels()[pri:0, instance:testcases.HotelBookingTest@5e5792a0]" name="shouldBeAbleToSearchForHotels" duration-ms="20841" started-at="2018-03-30T14:05:40Z" finished-at="2018-03-30T14:06:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldBeAbleToSearchForHotels -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.HotelBookingTest@5e5792a0]" name="closeBrowser" is-config="true" duration-ms="11556" started-at="2018-03-30T14:06:00Z" finished-at="2018-03-30T14:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.HotelBookingTest -->
     </test> <!-- Hotel Booking Test -->
-    <test name="SignIn Test" duration-ms="60749" started-at="2018-03-30T08:06:32Z" finished-at="2018-03-30T08:07:32Z">
+    <test name="SignIn Test" duration-ms="69150" started-at="2018-03-30T08:35:11Z" finished-at="2018-03-30T08:36:20Z">
       <class name="testcases.SignInTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.SignInTest@482f8f11]" name="openBrowser" is-config="true" duration-ms="46350" started-at="2018-03-30T13:36:32Z" finished-at="2018-03-30T13:37:18Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.SignInTest@1593948d]" name="openBrowser" is-config="true" duration-ms="49804" started-at="2018-03-30T14:05:11Z" finished-at="2018-03-30T14:06:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="shouldThrowAnErrorIfSignInDetailsAreMissing()[pri:0, instance:testcases.SignInTest@482f8f11]" name="shouldThrowAnErrorIfSignInDetailsAreMissing" duration-ms="14360" started-at="2018-03-30T13:37:18Z" finished-at="2018-03-30T13:37:32Z">
+        <test-method status="PASS" signature="shouldThrowAnErrorIfSignInDetailsAreMissing()[pri:0, instance:testcases.SignInTest@1593948d]" name="shouldThrowAnErrorIfSignInDetailsAreMissing" duration-ms="8186" started-at="2018-03-30T14:06:01Z" finished-at="2018-03-30T14:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldThrowAnErrorIfSignInDetailsAreMissing -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.SignInTest@1593948d]" name="closeBrowser" is-config="true" duration-ms="11105" started-at="2018-03-30T14:06:09Z" finished-at="2018-03-30T14:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.SignInTest -->
     </test> <!-- SignIn Test -->
-    <test name="Flight Booking Test" duration-ms="63336" started-at="2018-03-30T08:06:32Z" finished-at="2018-03-30T08:07:35Z">
+    <test name="Flight Booking Test" duration-ms="70338" started-at="2018-03-30T08:35:11Z" finished-at="2018-03-30T08:36:21Z">
       <class name="testcases.FlightBookingTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.FlightBookingTest@1bce4f0a]" name="openBrowser" is-config="true" duration-ms="44466" started-at="2018-03-30T13:36:32Z" finished-at="2018-03-30T13:37:16Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testcases.FlightBookingTest@5e3a8624]" name="openBrowser" is-config="true" duration-ms="41994" started-at="2018-03-30T14:05:11Z" finished-at="2018-03-30T14:05:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="testThatResultsAppearForAOneWayJourney()[pri:0, instance:testcases.FlightBookingTest@1bce4f0a]" name="testThatResultsAppearForAOneWayJourney" duration-ms="18831" started-at="2018-03-30T13:37:16Z" finished-at="2018-03-30T13:37:35Z">
+        <test-method status="PASS" signature="testThatResultsAppearForAOneWayJourney()[pri:0, instance:testcases.FlightBookingTest@5e3a8624]" name="testThatResultsAppearForAOneWayJourney" duration-ms="22552" started-at="2018-03-30T14:05:53Z" finished-at="2018-03-30T14:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testThatResultsAppearForAOneWayJourney -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.FlightBookingTest@5e3a8624]" name="closeBrowser" is-config="true" duration-ms="5746" started-at="2018-03-30T14:06:16Z" finished-at="2018-03-30T14:06:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.FlightBookingTest -->
     </test> <!-- Flight Booking Test -->
   </suite> <!-- TestVagrant Suite -->

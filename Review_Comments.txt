@@ -23,3 +23,6 @@ Did changes in the testng.xml file so that the 3 tests run simultaneously. This 
 
 
 Created a BaseTest class which will be responsible for opening the browsers. This will help us to have code re-usability.
+
+
+Used Page Factory Model in SignInTest and FlightBookingTest class.

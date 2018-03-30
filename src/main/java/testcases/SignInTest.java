@@ -1,23 +1,40 @@
 package testcases;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 public class SignInTest extends BaseTest{
-
+	
+	@FindBy(linkText="Your trips")
+	WebElement eleYourTrips;
+	
+	@FindBy(css="#SignIn")
+	WebElement btnSignIn_1;
+	
+	@FindBy(xpath="//div[@id='ModalFrame']/iframe")
+	WebElement frame;
+	
+	@FindBy(css="#signInButton")
+	WebElement btnSignIn_2;
+	
+	@FindBy(css="#errors1")
+	WebElement txtError;
+	
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
-        driver.findElement(By.linkText("Your trips")).click();
-        driver.findElement(By.id("SignIn")).click();        
+    	PageFactory.initElements(driver, this);
+    	
+        eleYourTrips.click();
+        btnSignIn_1.click();        
         
-        driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='ModalFrame']/iframe")));
-        driver.findElement(By.id("signInButton")).click();
+        driver.switchTo().frame(frame);
+        btnSignIn_2.click();
 
-        String errors1 = driver.findElement(By.id("errors1")).getText();
+        String errors1 = txtError.getText();
         
         AssertJUnit.assertTrue(errors1.contains("There were errors in your submission"));
-        
-        driver.quit();
     }
 }

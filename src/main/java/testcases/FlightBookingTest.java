@@ -1,49 +1,64 @@
 package testcases;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 public class FlightBookingTest extends BaseTest{
 
+	@FindBy(css="#OneWay")
+	WebElement rBtnOneWay;
+	
+	@FindBy(css="#FromTag")
+	WebElement txtFrom;
+	
+	@FindBy(css="#ui-id-1")
+	WebElement originOptions;
+	
+	@FindBy(css="#ToTag")
+	WebElement txtTo;
+	
+	@FindBy(css="#ui-id-2")
+	WebElement destOptions;
+	
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[3]/td[7]/a")
+	WebElement date;
+	
+	@FindBy(css="#SearchBtn")
+	WebElement btnSearch;
+	
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
-        driver.findElement(By.id("OneWay")).click();
+    	PageFactory.initElements(driver, this);
+    	
+        rBtnOneWay.click();
 
-        driver.findElement(By.id("FromTag")).clear();
-        driver.findElement(By.id("FromTag")).sendKeys("Bangalore");
+        txtFrom.clear();
+        txtFrom.sendKeys("Bangalore");
 
-        //wait for the auto complete options to appear for the origin
+        //wait for the auto complete options to appear for the origin        
+        originOptions.findElements(By.tagName("li")).get(0).click();
 
-        
-        List<WebElement> originOptions = driver.findElement(By.id("ui-id-1")).findElements(By.tagName("li"));
-        originOptions.get(0).click();
-
-        driver.findElement(By.id("ToTag")).clear();
-        driver.findElement(By.id("ToTag")).sendKeys("Delhi");
+        txtTo.clear();
+        txtTo.sendKeys("Delhi");
 
         //wait for the auto complete options to appear for the destination
 
         
         //select the first item from the destination auto complete list
-        List<WebElement> destinationOptions = driver.findElement(By.id("ui-id-2")).findElements(By.tagName("li"));
-        destinationOptions.get(0).click();
+        destOptions.findElements(By.tagName("li")).get(0).click();
 
-        driver.findElement(By.xpath("//*[@id='ui-datepicker-div']/div[2]/table/tbody/tr[3]/td[7]/a")).click();
+        date.click();
 
         //all fields filled in. Now click on search
-        driver.findElement(By.id("SearchBtn")).click();
+        btnSearch.click();
 
         //verify that result appears for the provided journey search
         AssertJUnit.assertTrue(isElementPresent(By.className("searchSummary")));
-
-        //close the browser
-        driver.quit();
-
     }
 
     private boolean isElementPresent(By by) {
