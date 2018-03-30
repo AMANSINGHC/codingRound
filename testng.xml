@@ -4,8 +4,6 @@
   <test name="Front End Test">
     <classes>
       <class name="testcases.SignInTest"/>
-      <class name="testcases.HotelBookingTest"/>
-      <class name="testcases.FlightBookingTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -2,3 +2,4 @@ Moved the driver to a separate folder (libs).
 Added a testNG file to run the tests.
 Moved all the three class files to testcases package in src/main/java.
 Converted the project to TestNG.
+WebDriver driver=new ChromeDriver(); We can't instantiate driver outside a method. Fixed it.

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestVagrant Suite]">
+  <test name="Front End Test(failed)">
+    <classes>
+      <class name="testcases.HotelBookingTest">
+        <methods>
+          <include name="shouldBeAbleToSearchForHotels"/>
+        </methods>
+      </class> <!-- testcases.HotelBookingTest -->
+      <class name="testcases.FlightBookingTest">
+        <methods>
+          <include name="testThatResultsAppearForAOneWayJourney"/>
+        </methods>
+      </class> <!-- testcases.FlightBookingTest -->
+      <class name="testcases.SignInTest">
+        <methods>
+          <include name="shouldThrowAnErrorIfSignInDetailsAreMissing"/>
+        </methods>
+      </class> <!-- testcases.SignInTest -->
+    </classes>
+  </test> <!-- Front End Test(failed) -->
+</suite> <!-- Failed suite [TestVagrant Suite] -->

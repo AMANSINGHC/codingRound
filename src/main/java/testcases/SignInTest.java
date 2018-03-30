@@ -1,22 +1,22 @@
 package testcases;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+
+import com.sun.javafx.PlatformUtil;
 
 public class SignInTest {
 
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
 
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
         setDriverPath();
-
+        driver = new ChromeDriver();
+        
         driver.get("https://www.cleartrip.com/");
         waitFor(2000);
 
@@ -40,13 +40,13 @@ public class SignInTest {
 
     private void setDriverPath() {
         if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver");
         }
         if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver.exe");
         }
         if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver_linux");
         }
     }
 
