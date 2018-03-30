@@ -1,13 +1,18 @@
 package testcases;
-import org.testng.annotations.Test;
-import com.sun.javafx.PlatformUtil;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.sun.javafx.PlatformUtil;
+
+@SuppressWarnings("restriction")
 public class HotelBookingTest {
 
     WebDriver driver;
@@ -28,14 +33,21 @@ public class HotelBookingTest {
     public void shouldBeAbleToSearchForHotels() {
         setDriverPath();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         
         driver.get("https://www.cleartrip.com/");
+        
+        PageFactory.initElements(driver, this);
+        
         hotelLink.click();
 
         localityTextBox.sendKeys("Indiranagar, Bangalore");
 
         new Select(travellerSelection).selectByVisibleText("1 room, 2 adults");
-        searchButton.click();
+        
+//        new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
 
         driver.quit();
 
@@ -43,13 +55,13 @@ public class HotelBookingTest {
 
     private void setDriverPath() {
         if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver");
         }
         if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver.exe");
         }
         if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver_linux");
         }
     }
 

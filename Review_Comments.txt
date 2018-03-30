@@ -9,3 +9,7 @@ WebDriver driver=new ChromeDriver(); We can't instantiate driver outside a metho
 Instead of Thread.sleep(), we can give implicit wait of 2 seconds.
 The signInButton was present in a frame. We've to switch to that frame and then click on the button.
 My chrome browser wasn't compatible with the provided chromedriver version. So, updated it to the one present in my local system.
+
+
+In HotelBookingTest class, we're using the Page Factory Model, but we didn't initialized the web elements after opening the web page. Did that using PageFactory.initElement(driver, this);
+Was unable to click on the search button, so clicked it using JavaScriptExecutor.

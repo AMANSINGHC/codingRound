@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestVagrant Suite" duration-ms="57764" started-at="2018-03-30T07:01:42Z" finished-at="2018-03-30T07:02:40Z">
+  <suite name="TestVagrant Suite" duration-ms="38139" started-at="2018-03-30T07:31:54Z" finished-at="2018-03-30T07:32:32Z">
     <groups>
     </groups>
-    <test name="Front End Test" duration-ms="57764" started-at="2018-03-30T07:01:42Z" finished-at="2018-03-30T07:02:40Z">
-      <class name="testcases.SignInTest">
-        <test-method status="PASS" signature="shouldThrowAnErrorIfSignInDetailsAreMissing()[pri:0, instance:testcases.SignInTest@d2cc05a]" name="shouldThrowAnErrorIfSignInDetailsAreMissing" duration-ms="57682" started-at="2018-03-30T12:31:42Z" finished-at="2018-03-30T12:32:40Z">
+    <test name="Front End Test" duration-ms="38139" started-at="2018-03-30T07:31:54Z" finished-at="2018-03-30T07:32:32Z">
+      <class name="testcases.HotelBookingTest">
+        <test-method status="PASS" signature="shouldBeAbleToSearchForHotels()[pri:0, instance:testcases.HotelBookingTest@d2cc05a]" name="shouldBeAbleToSearchForHotels" duration-ms="38061" started-at="2018-03-30T13:01:54Z" finished-at="2018-03-30T13:02:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shouldThrowAnErrorIfSignInDetailsAreMissing -->
-      </class> <!-- testcases.SignInTest -->
+        </test-method> <!-- shouldBeAbleToSearchForHotels -->
+      </class> <!-- testcases.HotelBookingTest -->
     </test> <!-- Front End Test -->
   </suite> <!-- TestVagrant Suite -->
 </testng-results>

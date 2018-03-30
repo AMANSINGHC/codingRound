@@ -3,7 +3,7 @@
 <suite name="TestVagrant Suite">
   <test name="Front End Test">
     <classes>
-      <class name="testcases.SignInTest"/>
+      <class name="testcases.HotelBookingTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
