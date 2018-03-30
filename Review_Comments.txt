@@ -2,4 +2,10 @@ Moved the driver to a separate folder (libs).
 Added a testNG file to run the tests.
 Moved all the three class files to testcases package in src/main/java.
 Converted the project to TestNG.
+
+
+Maximized the Window.
 WebDriver driver=new ChromeDriver(); We can't instantiate driver outside a method. Fixed it.
+Instead of Thread.sleep(), we can give implicit wait of 2 seconds.
+The signInButton was present in a frame. We've to switch to that frame and then click on the button.
+My chrome browser wasn't compatible with the provided chromedriver version. So, updated it to the one present in my local system.
