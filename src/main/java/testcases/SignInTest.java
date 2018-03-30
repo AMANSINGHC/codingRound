@@ -1,3 +1,6 @@
+package testcases;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +26,7 @@ public class SignInTest {
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
-        Assert.assertTrue(errors1.contains("There were errors in your submission"));
+        AssertJUnit.assertTrue(errors1.contains("There were errors in your submission"));
         driver.quit();
     }
 

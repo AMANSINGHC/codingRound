@@ -1,3 +1,6 @@
+package testcases;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -49,7 +52,7 @@ public class FlightBookingTest {
 
         waitFor(5000);
         //verify that result appears for the provided journey search
-        Assert.assertTrue(isElementPresent(By.className("searchSummary")));
+        AssertJUnit.assertTrue(isElementPresent(By.className("searchSummary")));
 
         //close the browser
         driver.quit();

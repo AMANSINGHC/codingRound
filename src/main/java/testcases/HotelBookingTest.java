@@ -1,3 +1,5 @@
+package testcases;
+import org.testng.annotations.Test;
 import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

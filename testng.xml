@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestVagrant Suite">
+  <test name="Front End Test">
+    <classes>
+      <class name="testcases.SignInTest"/>
+      <class name="testcases.HotelBookingTest"/>
+      <class name="testcases.FlightBookingTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
