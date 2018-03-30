@@ -1,21 +1,12 @@
 package testcases;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import com.sun.javafx.PlatformUtil;
-
-@SuppressWarnings("restriction")
-public class HotelBookingTest {
-
-    WebDriver driver;
+public class HotelBookingTest extends BaseTest{
 
     @FindBy(linkText = "Hotels")
     private WebElement hotelLink;
@@ -30,14 +21,8 @@ public class HotelBookingTest {
     private WebElement travellerSelection;
 
     @Test
-    public void shouldBeAbleToSearchForHotels() {
-        setDriverPath();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        
-        driver.get("https://www.cleartrip.com/");
-        
+    public void shouldBeAbleToSearchForHotels() 
+    {    
         PageFactory.initElements(driver, this);
         
         hotelLink.click();
@@ -50,19 +35,5 @@ public class HotelBookingTest {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchButton);
 
         driver.quit();
-
     }
-
-    private void setDriverPath() {
-        if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver");
-        }
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver.exe");
-        }
-        if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver_linux");
-        }
-    }
-
 }

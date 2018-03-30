@@ -18,4 +18,8 @@ Was unable to click on the search button, so clicked it using JavaScriptExecutor
 Destination id should be "ToTag".
 Was not able to click on the calendar to select the date, now selecting date in next month.
 
+
 Did changes in the testng.xml file so that the 3 tests run simultaneously. This will reduce the execution time to run the suite.
+
+
+Created a BaseTest class which will be responsible for opening the browsers. This will help us to have code re-usability.

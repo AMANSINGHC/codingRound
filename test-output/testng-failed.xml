@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [TestVagrant Suite]">
-  <test name="Front End Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestVagrant Suite]" parallel="tests">
+  <test name="Hotel Booking Test(failed)" parallel="tests">
     <classes>
       <class name="testcases.HotelBookingTest">
         <methods>
@@ -9,5 +9,5 @@
         </methods>
       </class> <!-- testcases.HotelBookingTest -->
     </classes>
-  </test> <!-- Front End Test(failed) -->
+  </test> <!-- Hotel Booking Test(failed) -->
 </suite> <!-- Failed suite [TestVagrant Suite] -->

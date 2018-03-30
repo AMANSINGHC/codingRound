@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-TestVagrant_Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestVagrant_Suite" title="testcases.HotelBookingTest" hash-for-method="shouldBeAbleToSearchForHotels">shouldBeAbleToSearchForHotels</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestVagrant_Suite" title="testcases.SignInTest" hash-for-method="shouldThrowAnErrorIfSignInDetailsAreMissing">shouldThrowAnErrorIfSignInDetailsAreMissing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestVagrant_Suite" title="testcases.FlightBookingTest" hash-for-method="testThatResultsAppearForAOneWayJourney">testThatResultsAppearForAOneWayJourney</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestVagrant_Suite -->
@@ -117,6 +127,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestVagrant_Suite" class="panel TestVagrant_Suite">
+          <div class="suite-TestVagrant_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.SignInTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldThrowAnErrorIfSignInDetailsAreMissing">
+                  </a> <!-- shouldThrowAnErrorIfSignInDetailsAreMissing -->
+                  <span class="method-name">shouldThrowAnErrorIfSignInDetailsAreMissing</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestVagrant_Suite-class-passed -->
+          <div class="suite-TestVagrant_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.FlightBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testThatResultsAppearForAOneWayJourney">
+                  </a> <!-- testThatResultsAppearForAOneWayJourney -->
+                  <span class="method-name">testThatResultsAppearForAOneWayJourney</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestVagrant_Suite-class-passed -->
           <div class="suite-TestVagrant_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -141,12 +181,22 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;TestVagrant Suite&quot;&gt;
-  &lt;test name=&quot;Front End Test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;TestVagrant Suite&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test name=&quot;SignIn Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.SignInTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SignIn Test --&gt;
+  &lt;test name=&quot;Hotel Booking Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.HotelBookingTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Front End Test --&gt;
+  &lt;/test&gt; &lt;!-- Hotel Booking Test --&gt;
+  &lt;test name=&quot;Flight Booking Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.FlightBookingTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Flight Booking Test --&gt;
 &lt;/suite&gt; &lt;!-- TestVagrant Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +208,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Front End Test (1 class)</span>
+                <span class="test-name">SignIn Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Hotel Booking Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Flight Booking Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +240,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'shouldBeAbleToSearchForHotels')
 data.setCell(0, 2, 'testcases.HotelBookingTest')
-data.setCell(0, 3, 38061);
+data.setCell(0, 3, 21921);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testThatResultsAppearForAOneWayJourney')
+data.setCell(1, 2, 'testcases.FlightBookingTest')
+data.setCell(1, 3, 18831);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'shouldThrowAnErrorIfSignInDetailsAreMissing')
+data.setCell(2, 2, 'testcases.SignInTest')
+data.setCell(2, 3, 14360);
 window.suiteTableData['TestVagrant_Suite']= { tableData: data, tableDiv: 'times-div-TestVagrant_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-TestVagrant_Suite">
               </div> <!-- times-div-TestVagrant_Suite -->
             </div> <!-- times-div -->
@@ -219,10 +283,45 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">testcases.FlightBookingTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.HotelBookingTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.SignInTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">testcases.HotelBookingTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">shouldBeAbleToSearchForHotels</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">37879 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.FlightBookingTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testThatResultsAppearForAOneWayJourney</span>
+                <span class="method-start">44468 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.SignInTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">shouldThrowAnErrorIfSignInDetailsAreMissing</span>
+                <span class="method-start">46352 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

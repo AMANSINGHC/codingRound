@@ -1,32 +1,17 @@
 package testcases;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-import com.sun.javafx.PlatformUtil;
-
-@SuppressWarnings("restriction")
-public class FlightBookingTest {
-
-    WebDriver driver;
-
+public class FlightBookingTest extends BaseTest{
 
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
-        setDriverPath();
-        driver = new ChromeDriver();
-        driver.get("https://www.cleartrip.com/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        
         driver.findElement(By.id("OneWay")).click();
 
         driver.findElement(By.id("FromTag")).clear();
@@ -67,18 +52,6 @@ public class FlightBookingTest {
             return true;
         } catch (NoSuchElementException e) {
             return false;
-        }
-    }
-
-    private void setDriverPath() {
-        if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver");
-        }
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver.exe");
-        }
-        if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//libs//chromedriver_linux");
         }
     }
 }
