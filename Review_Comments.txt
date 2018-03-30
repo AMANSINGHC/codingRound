@@ -13,3 +13,9 @@ My chrome browser wasn't compatible with the provided chromedriver version. So, 
 
 In HotelBookingTest class, we're using the Page Factory Model, but we didn't initialized the web elements after opening the web page. Did that using PageFactory.initElement(driver, this);
 Was unable to click on the search button, so clicked it using JavaScriptExecutor.
+
+
+Destination id should be "ToTag".
+Was not able to click on the calendar to select the date, now selecting date in next month.
+
+Did changes in the testng.xml file so that the 3 tests run simultaneously. This will reduce the execution time to run the suite.

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestVagrant Suite">
-  <test name="Front End Test">
-    <classes>
-      <class name="testcases.HotelBookingTest"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+<suite name="TestVagrant Suite" parallel="tests">
+	<test name="SignIn Test">
+    	<classes>
+      		<class name="testcases.SignInTest"/>
+    	</classes>
+  	</test>
+  	<test name="Hotel Booking Test">
+    	<classes>
+      		<class name="testcases.HotelBookingTest"/>
+    	</classes>
+  	</test>
+  	<test name="Flight Booking Test">
+    	<classes>
+      		<class name="testcases.FlightBookingTest"/>
+    	</classes>
+  	</test> 
+</suite> 
